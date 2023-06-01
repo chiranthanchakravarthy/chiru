@@ -1,0 +1,33 @@
+pentagon
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .pentagon {
+      width: 100px;
+      height: 0;
+      border-bottom: 100px solid yellow;
+      border-left: 50px solid transparent;
+      border-right: 50px solid transparent;
+      position: relative;
+      transform: rotate(36deg);
+    }
+
+    .pentagon::before {
+      content: '';
+      position: absolute;
+      top: -80px;
+      left: -50px;
+      width: 0;
+      height: 0;
+      border-bottom: 80px solid yellow;
+      border-left: 40px solid transparent;
+      border-right: 40px solid transparent;
+      transform: rotate(-36deg);
+    }
+  </style>
+</head>
+<body>
+  <div class="pentagon"></div>
+</body>
+</html>
